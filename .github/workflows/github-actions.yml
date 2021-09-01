@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: env
+      - run: ${{ env.GITHUB_SHA }}
       # - uses: actions/checkout@v2
       #   name: Check out code
       # - uses: mr-smithers-excellent/docker-build-push@v5
