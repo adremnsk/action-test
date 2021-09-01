@@ -1,7 +1,7 @@
-name: GitHub Actions Demo
+name: Build ans push docker image
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-And-Push:
     runs-on: ubuntu-latest
     steps:
       - name: Get commit short sha (7)
