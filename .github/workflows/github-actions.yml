@@ -1,5 +1,9 @@
 name: Build ans push docker image
-on: [push]
+on:
+  push:
+    branches:
+      - master
+      - develop
 jobs:
   Build-And-Push:
     runs-on: ubuntu-latest
