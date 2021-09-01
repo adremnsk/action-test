@@ -19,6 +19,6 @@ jobs:
           image: test/test-action
           tags: v1, latest, ${{ steps.vars.outputs.sha_short }}
           registry: ${{ secrets.DOCKER_REGISTRY }}
-          dockerfile: Dockerfile
+          dockerfile: docker/Dockerfile
           username: ${{ secrets.DOCKER_LOGIN }}
           password: ${{ secrets.DOCKER_PASSWORD }}
