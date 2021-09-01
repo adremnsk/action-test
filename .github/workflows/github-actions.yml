@@ -2,16 +2,16 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: Check out code
-      - uses: mr-smithers-excellent/docker-build-push@v5
-        name: Build & push Docker image
-        with:
-          image: test/test-action
-          tags: v1, latest, ${{ steps.vars.outputs.sha_short }}
-          registry: ${{ secrets.DOCKER_REGISTRY }}
-          dockerfile: Dockerfile
-          username: ${{ secrets.DOCKER_LOGIN }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+      - run: env
+      # - uses: actions/checkout@v2
+      #   name: Check out code
+      # - uses: mr-smithers-excellent/docker-build-push@v5
+      #   name: Build & push Docker image
+      #   with:
+      #     image: test/test-action
+      #     tags: v1, latest, ${{ steps.vars.outputs.sha_short }}
+      #     registry: ${{ secrets.DOCKER_REGISTRY }}
+      #     dockerfile: Dockerfile
+      #     username: ${{ secrets.DOCKER_LOGIN }}
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
