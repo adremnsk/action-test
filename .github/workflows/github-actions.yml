@@ -4,7 +4,12 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ env.GITHUB_SHA }}
+
+      - name: Set outputs
+        id: vars
+        run: echo "::set-output name=sha_short::$( echo $GITHUB_SHA | head -c7)"
+      - name: Check outputs
+        run: echo ${{ steps.vars.outputs.sha_short }}
       # - uses: actions/checkout@v2
       #   name: Check out code
       # - uses: mr-smithers-excellent/docker-build-push@v5
