@@ -7,6 +7,8 @@ jobs:
       - name: Get commit short sha (7)
         id: vars
         run: echo "::set-output name=sha_short::$( echo $GITHUB_SHA | head -c7)"
+      - name: test
+        run: echo "${{ secrets.DOCKER_LOGIN }}"
       - uses: actions/checkout@v2
         name: Check out code
       - uses: mr-smithers-excellent/docker-build-push@v5
