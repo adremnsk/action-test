@@ -4,8 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Set outputs
+      - name: Get commit short sha (7)
         id: vars
         run: echo "::set-output name=sha_short::$( echo $GITHUB_SHA | head -c7)"
       - uses: actions/checkout@v2
