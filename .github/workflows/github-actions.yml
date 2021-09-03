@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v2
         name: Check out code
       - name: echo test
-        run: echo ${{ GITHUB_REF#refs/*/ }}
+        run: echo ${BRANCH_NAME}
+      - name: echo test2
+        run: echo "${BRANCH_NAME}"
 #       - uses: mr-smithers-excellent/docker-build-push@v5
 #         name: Build & push Docker image
 #         with:
